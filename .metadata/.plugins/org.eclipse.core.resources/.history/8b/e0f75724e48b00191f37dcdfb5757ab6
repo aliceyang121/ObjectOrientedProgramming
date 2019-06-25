@@ -1,0 +1,64 @@
+package HW5;
+
+import java.util.Scanner;
+
+import p1.Person;
+import p1.PersonBag;
+
+public class App {
+	
+	static Scanner scanner = new Scanner(System.in);
+	
+	static String reply;
+	static int count = 0;
+	static PersonBag theBag = new PersonBag(1000);
+	
+	public static void main(String[] args) {
+		boolean isFinished = false;
+		
+		while(!isFinished) {
+			System.out.println("Would you like to create an user account or log in? If finished, reply 'finished'.");
+			reply = scanner.nextLine();
+			if (reply.equalsIgnoreCase("create an user account"));
+				createUserAccount();
+			if (reply.equalsIgnoreCase("log in"))
+				logIn();
+			if (reply.equalsIgnoreCase("finished"))
+				isFinished = true;
+		}
+	}
+	
+	private static void createUserAccount() {
+		String firstName;
+		String lastName;
+		String username;
+		String password;
+		
+		System.out.println("Please insert the first name");
+		firstName = scanner.nextLine();
+		System.out.println("Please insert the last name");
+		lastName = scanner.nextLine();
+		System.out.println("Please insert your username");
+		username = scanner.nextLine();
+		System.out.println("Please insert your password");
+		password = scanner.nextLine();
+		
+		theBag.insert(new Person(firstName, lastName, username, password));
+		count++;
+	}
+	
+	private static void logIn() {
+		String username;
+		String password;
+		
+		System.out.println("Please insert your username");
+		username = scanner.nextLine();
+		System.out.println("Please insert your password");
+		password = scanner.nextLine();
+		
+		theBag.search(username, password);
+		
+	}
+
+
+}

@@ -1,0 +1,8 @@
+package model;
+
+public class MiniFacultyCourseInfo {
+	private String courseNumber;
+	private String courseTitle;
+	private int numberOfCredits;
+	private String courseStatus;
+}

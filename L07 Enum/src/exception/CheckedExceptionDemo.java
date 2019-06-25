@@ -1,0 +1,42 @@
+package exception;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class CheckedExceptionDemo {
+
+	public static void main(String[] args) {
+		File file = new File("xyz.txt");
+		Scanner scanner = null;
+		
+		//line 17 Scanner(file)
+		//ctrl + shift+ o to import!!!!
+			//two options for above red line: 1. throw FileNotFoundException	2. surround with try/catch
+		try {
+			scanner = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}	
+	
+//		System.out.println("hello");
+		
+		
+		while (scanner.hasNextLine()) {
+			String str = scanner.nextLine();
+			System.out.println(str);
+		}
+		
+		
+//		String str = scanner.nextLine();
+//		String[] strs = str.split(" ");
+//		int n1 = Integer.parseInt(strs[1]);
+//		
+//		str = scanner.nextLine();
+//		strs = str.split(" ");
+//		int n2 = Integer.parseInt(strs[1]);
+//		System.out.println(n1 + n2);
+		
+	}
+
+}

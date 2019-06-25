@@ -1,0 +1,26 @@
+package git;
+
+public class TranscriptMaker {
+	
+
+	public static void main(String[] args) {
+		
+		takeInput();
+		processInput();
+		showTranscript();
+
+	}
+
+	private static void takeInput() {
+		System.out.println("Please input your course, the course's credits, and your grade for that course.");
+	}
+	
+	private static void processInput() {
+		
+	}
+	
+	private static void showTranscript() {
+		
+	}
+
+}

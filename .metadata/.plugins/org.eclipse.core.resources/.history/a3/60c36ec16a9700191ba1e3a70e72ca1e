@@ -1,0 +1,10 @@
+package p1;
+
+public class Demo {
+
+	public static void main(String[] args) throws WrongCreditValueException {
+		Course course1 = new Course("CSE148", 4.5);
+		System.out.println(course1);
+	}
+
+}

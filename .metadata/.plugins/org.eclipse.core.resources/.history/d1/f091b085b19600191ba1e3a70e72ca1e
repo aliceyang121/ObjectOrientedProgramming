@@ -1,0 +1,5 @@
+package model;
+
+public enum CourseStatuses {
+	Taken, Taking, ToTake;
+}

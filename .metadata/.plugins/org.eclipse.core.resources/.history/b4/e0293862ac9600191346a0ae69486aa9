@@ -1,0 +1,6 @@
+package model;
+
+public class MiniStudentCourseBag {
+	private MiniStudentInfo[] miniStudentInfo;
+	private int nElems = 0;
+}

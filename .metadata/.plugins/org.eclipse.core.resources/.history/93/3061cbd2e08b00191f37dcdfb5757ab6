@@ -1,0 +1,38 @@
+package HW5;
+
+import java.util.Scanner;
+
+public class App {
+	
+	static Scanner scanner = new Scanner(System.in);
+	
+	static String reply;
+	
+	public static void main(String[] args) {
+		boolean isFinished = false;
+		
+		while(!isFinished) {
+			System.out.println("Would you like to create an user account or log in? If finished, reply 'finished'.");
+			reply = scanner.nextLine();
+			if (reply.equalsIgnoreCase("create an user account"));
+				createUserAccount();
+			if (reply.equalsIgnoreCase("log in"))
+				logIn();
+			if (reply.equalsIgnoreCase("finished"))
+				isFinished = true;
+		}
+	}
+	
+	private static void createUserAccount() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private static void logIn() {
+		System.out.println("Please insert your rusername");
+		reply = scanner.nextLine();
+		Generator.
+	}
+
+
+}

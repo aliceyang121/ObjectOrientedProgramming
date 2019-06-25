@@ -1,0 +1,16 @@
+package inheritance;
+
+public class Student extends Person {
+	
+	private double gpa;
+	
+	public Student(String name, double gpa) {
+		super(name);
+		this.gpa = gpa;
+	}
+	
+	public String toString() {
+		return super.toString() + "GPA: " + gpa;
+	}
+	
+}

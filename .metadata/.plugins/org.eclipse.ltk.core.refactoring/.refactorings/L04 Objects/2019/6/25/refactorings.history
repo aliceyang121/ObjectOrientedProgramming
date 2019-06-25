@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;L05 Inheritance and Polymorphism/src/hw06&apos;&#x0D;&#x0A;- Original project: &apos;L04 Objects&apos;&#x0D;&#x0A;- Destination element: &apos;L05 Inheritance and Polymorphism/src/hw06&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     HW5.PersonBag.java&#x0D;&#x0A;     HW5.Person.java" description="Copy compilation units" destination="=L05 Inheritance and Polymorphism/src&lt;hw06" element1="/src&lt;HW5{PersonBag.java" element2="/src&lt;HW5{Person.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1560815781863" units="2" version="1.0"/>
+</session>

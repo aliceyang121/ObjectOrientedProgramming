@@ -1,0 +1,5 @@
+Hello 100
+Hi 50
+bye
+hello
+again

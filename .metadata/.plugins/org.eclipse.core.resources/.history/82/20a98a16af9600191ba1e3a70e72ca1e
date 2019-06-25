@@ -1,0 +1,44 @@
+package model;
+
+public class MiniStudentCourseBag {
+	private MiniStudentInfo[] miniStudentInfos;
+	private int nElems = 0;
+	
+	public MiniStudentCourseBag (int maxSize) {
+		miniStudentInfos = new MiniStudentInfo[maxSize];
+	}
+
+	public void insert(MiniStudentInfo miniStudentInfo) {
+		miniStudentInfos[nElems] = miniStudentInfo;
+		nElems++;
+	}
+
+	public void display() {
+		for (int i=0; i<nElems; i++) {
+			System.out.println(miniStudentInfos[i]);
+		}
+	}
+	
+	public double calculateGpa() {
+		double sum = 0.0;
+		for (int i=0; i<miniStudentInfos.length; i++) {
+			if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.A))
+				sum += 4.0;
+			else if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.B_PLUS))
+				sum += 3.5;
+			else if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.B))
+				sum += 3.0;
+			else if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.C_PLUS))
+				sum += 2.5;
+			else if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.C))
+				sum += 2.0;
+			else if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.D_PLUS))
+				sum += 1.5;
+			else if (miniStudentInfos[i].getLetterGrade().equals(LetterGrades.D))
+				sum += 1.0;
+			else 
+				sum += 0;
+		}
+		double gpa = sum / (miniStudentInfos.length);
+	}
+}

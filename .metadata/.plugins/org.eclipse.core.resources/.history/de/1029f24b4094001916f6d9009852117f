@@ -1,0 +1,11 @@
+package enums;
+
+public class Demo {
+
+	public static void main(String[] args) {
+//		String season = "Spring";
+//		String[] seasons = {"Spring", "Summer", "Fall", "Winter"};
+		System.out.println(Seasons.FALL);
+	}
+
+}
