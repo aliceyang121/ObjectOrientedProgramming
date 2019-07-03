@@ -1,10 +1,11 @@
 package p1;
 
-public class WrongCreditValueException extends Exception{
+import java.io.IOException;
+
+public class WrongCreditValueException extends IOException{
 	
 	public WrongCreditValueException(String message) {
 		super(message);
 	}
-	
 	
 }

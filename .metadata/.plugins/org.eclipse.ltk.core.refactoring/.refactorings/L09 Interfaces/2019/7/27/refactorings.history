@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;interfaces1.Fly.java&apos; to &apos;Duckable.java&apos;&#x0D;&#x0A;- Original project: &apos;L09 Interfaces&apos;&#x0D;&#x0A;- Original element: &apos;interfaces1.Fly.java&apos;&#x0D;&#x0A;- Renamed element: &apos;interfaces1.Duckable.java&apos;" description="Rename compilation unit &apos;Fly.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;interfaces1{Fly.java" name="Duckable.java" references="false" stamp="1562007242353" version="1.0"/>
+</session>

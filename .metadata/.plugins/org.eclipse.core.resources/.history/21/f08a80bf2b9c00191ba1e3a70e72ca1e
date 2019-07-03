@@ -1,0 +1,10 @@
+package objectOutput;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		Student s1 = new Student("Alan" 3.5);
+		FileOutputStrea,
+	}
+
+}

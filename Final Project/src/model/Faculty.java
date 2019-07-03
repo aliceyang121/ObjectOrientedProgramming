@@ -8,12 +8,13 @@ public class Faculty extends Person {
 	private String officePhone;
 	private MiniFacultyCourseBag miniFacultyCourseBag;
 
-	public Faculty(String firstName, String lastName, Titles title, double salary, Majors department, String officePhone) {
+	public Faculty(String firstName, String lastName, Titles title, double salary, Majors department, String officePhone, MiniFacultyCourseBag miniFacultyCourseBag) {
 		super(firstName, lastName);
 		this.title = title;
 		this.salary = salary;
 		this.department = department;
 		this.officePhone = officePhone;
+		this.miniFacultyCourseBag = miniFacultyCourseBag;
 	}
 	
 	public Titles getTitle() {

@@ -16,7 +16,7 @@ public class Utility {
 	private static String[] last_names = new String [1000];
 	private static String[] course_names = new String [1000];
 	private static String[] major_names = new String [100];
-	private static String[] rank_names = {"Lecturer", "Assistant Professor", "Associate Professor", "Professor"};
+	private static String[] title_names = {"Lecturer", "Assistant Professor", "Associate Professor", "Professor"};
 
 	
 	public static void generatePersons(PersonBag theBag) {	
@@ -64,10 +64,10 @@ public class Utility {
 		int randNum;
 		String firstName;
 		String lastName;
-		long phoneNumber;
+		long officePhone;
 		double salary;
-		String rank;
-		String discipline;
+		String title;
+		String department;
 		
 		for(int i=nElems; i<nElems+200; i++) {
 			if (i%2 == 0)
@@ -76,12 +76,12 @@ public class Utility {
 				firstName = boy_names[(int)(Math.random()*boy_names.length)];
 			
 			lastName = last_names[(int)(Math.random()*last_names.length)];
-			phoneNumber = (long)(Math.random()*(999999999 - 000000000)) + 000000000;
+			officePhone = (long)(Math.random()*(999999999 - 000000000)) + 000000000;
 			salary = (double)(Math.random()*(100000-50000)+50000);
-			rank = rank_names[(int)(Math.random()*rank_names.length)];
-			discipline = course_names[(int)(Math.random()*course_names.length)];
+			title = title_names[(int)(Math.random()*title_names.length)];
+			department = course_names[(int)(Math.random()*course_names.length)];
 			
-			Faculty p = new Faculty(firstName, lastName, phoneNumber, salary, rank, discipline);
+			Faculty p = new Faculty(firstName, lastName, title, salary, department, officePhone, miniFacultyCourseBag);
 			theBag.insert(p);
 		}
 	}

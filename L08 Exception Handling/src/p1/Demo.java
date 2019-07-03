@@ -9,6 +9,14 @@ public class Demo {
 		} catch (WrongCreditValueException e) {
 			System.out.println(e.getMessage());
 //			getNewCreditValue();
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Array index out of bounds exception");
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println("Index out of bounds exception");
+		} catch (RuntimeException e) {
+			System.out.println("Exception occurred");
+		} finally {		//this will be executed even if it doesn't crash
+			
 		}
 		System.out.println(course1);
 	}

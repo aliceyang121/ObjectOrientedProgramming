@@ -1,0 +1,20 @@
+package writeTexrFile;
+
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		try {
+			PrintWriter pw = new PrintWriter("data.txt");
+			pw.print("hello");
+			pw.println(5);
+			pw.close();
+			System.out.println("Done Writing");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

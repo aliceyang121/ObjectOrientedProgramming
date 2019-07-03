@@ -1,0 +1,5 @@
+package normalInterfaceImplementation;
+
+public interface Calculator {
+
+}

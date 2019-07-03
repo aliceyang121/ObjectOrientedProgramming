@@ -11,7 +11,7 @@ public class Course {
 		super();
 		this.courseNumber = courseNumber;
 		if (credits > 4.0 || credits < 0.0) {
-			throw new WrongCreditValueException("The credit vaule is incorrect");
+			throw new WrongCreditValueException("The credit value is incorrect");
 		}
 // METHOD 1
 //			Scanner scanner = new Scanner(System.in);
