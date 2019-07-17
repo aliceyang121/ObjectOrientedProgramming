@@ -1,0 +1,10 @@
+package utils;
+
+import model.MiniStudentCourseBag;
+
+public class MiniStudentCourseBagFactory {
+	
+	public static MiniStudentCourseBag emitMiniStudentCourseBag() {
+		
+	}
+}

@@ -5,4 +5,26 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.awt.TextField"/>
+<fullyQualifiedTypeName name="java.awt.Label"/>
+<fullyQualifiedTypeName name="utils.CourseFactory"/>
+<fullyQualifiedTypeName name="model.PersonBag"/>
+<fullyQualifiedTypeName name="utils.PersonFactory"/>
+<fullyQualifiedTypeName name="model.Majors"/>
+<fullyQualifiedTypeName name="model.MiniStudentCourseBag"/>
+<fullyQualifiedTypeName name="model.Student"/>
+<fullyQualifiedTypeName name="model.Course"/>
+<fullyQualifiedTypeName name="model.MiniStudentInfo"/>
+<fullyQualifiedTypeName name="model.CourseBag"/>
+<fullyQualifiedTypeName name="model.MiniFacultyCourseBag"/>
+<fullyQualifiedTypeName name="model.Faculty"/>
+<fullyQualifiedTypeName name="model.MiniFacultyCourseInfo"/>
+<fullyQualifiedTypeName name="model.Classroom"/>
+<fullyQualifiedTypeName name="model.ClassroomBag"/>
+<fullyQualifiedTypeName name="utils.ClassroomFactory"/>
+<fullyQualifiedTypeName name="model.TextbookBag"/>
+<fullyQualifiedTypeName name="utils.TextbookFactory"/>
+<fullyQualifiedTypeName name="model.Textbook"/>
+<fullyQualifiedTypeName name="model.LetterGrades"/>
+<fullyQualifiedTypeName name="model.CourseStatusesStudent"/>
 </qualifiedTypeNameHistroy>

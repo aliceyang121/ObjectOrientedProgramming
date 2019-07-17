@@ -1,6 +1,7 @@
 package model;
 
 public class Course {
+
 	private String courseNumber;
 	private String courseTitle;
 	private String courseDescription;
@@ -44,5 +45,11 @@ public class Course {
 
 	public void setNumberOfCredits(double numberOfCredits) {
 		this.numberOfCredits = numberOfCredits;
+	}
+	
+	@Override
+	public String toString() {
+		return "Course: courseNumber=" + courseNumber + ", courseTitle=" + courseTitle + ", courseDescription="
+				+ courseDescription + ", numberOfCredits=" + numberOfCredits;
 	}
 }

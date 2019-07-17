@@ -42,7 +42,7 @@ public class ClassroomBag {
 	
 	public void display() {
 		for (int i=0; i<nElems; i++) {
-			System.out.println(classroomArray[i]);
+			System.out.println(classroomArray[i].toString());
 		}
 	}
 }

@@ -1,6 +1,0 @@
-package model;
-
-public class ClassroomBag {
-	private Classroom[] classroomArray;
-	private int nElems = 0;
-}

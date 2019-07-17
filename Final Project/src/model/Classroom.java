@@ -22,4 +22,9 @@ public class Classroom {
 	public void setRoomBuilding(RoomBuildings roomBuilding) {
 		this.roomBuilding = roomBuilding;
 	}
+	
+	@Override
+	public String toString() {
+		return "Classroom: roomNumber=" + roomNumber + ", roomBuilding=" + roomBuilding;
+	}
 }

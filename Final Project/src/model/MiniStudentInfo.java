@@ -2,11 +2,11 @@ package model;
 
 public class MiniStudentInfo {
 	private String courseNumber;
-	private int numberOfCredits;
+	private double numberOfCredits;
 	private LetterGrades letterGrade;
 	private CourseStatusesStudent courseStatus;
 	
-	public MiniStudentInfo (String courseNumber, int numberOfCredits, LetterGrades letterGrade, CourseStatusesStudent courseStatus) {
+	public MiniStudentInfo (String courseNumber, double numberOfCredits, LetterGrades letterGrade, CourseStatusesStudent courseStatus) {
 		this.courseNumber = courseNumber;
 		this.numberOfCredits = numberOfCredits;
 		this.letterGrade = letterGrade;
@@ -21,7 +21,7 @@ public class MiniStudentInfo {
 		this.courseNumber = courseNumber;
 	}
 
-	public int getNumberOfCredits() {
+	public double getNumberOfCredits() {
 		return numberOfCredits;
 	}
 

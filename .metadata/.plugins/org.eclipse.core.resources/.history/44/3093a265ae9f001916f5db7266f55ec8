@@ -1,0 +1,25 @@
+package utils;
+
+import model.Course;
+import model.CourseBag;
+import model.CourseStatusesStudent;
+import model.LetterGrades;
+import model.MiniStudentCourseBag;
+
+public class MiniStudentCourseBagFactory {
+	
+	private static MiniStudentCourseBag miniStudentCourseBag;
+	private static String courseNumber;
+	private static int numberOfCredits;
+	private static LetterGrades letterGrade;
+	private static CourseStatusesStudent courseStatus;
+	
+	public static MiniStudentCourseBag emitMiniStudentCourseBag(CourseBag courseBag) {
+		Course course = courseBag.returnRandomCourse();
+		
+		
+		
+		
+		return miniStudentCourseBag;
+	}
+}

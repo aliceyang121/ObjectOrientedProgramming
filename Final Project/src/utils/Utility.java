@@ -1,3 +1,5 @@
+//YOU CAN DELETE THIS CLASS
+
 package utils;
 
 import model.PersonBag;
@@ -53,8 +55,8 @@ public class Utility {
 			major = major_names[(int)(Math.random()*major_names.length)];
 			course = course_names[(int)(Math.random()*course_names.length)];
 			
-			Student p = new Student(firstName, lastName, major, miniStudentCourseBag);
-			theBag.insert(p);
+//			Student p = new Student(firstName, lastName, major, miniStudentCourseBag);
+//			theBag.insert(p);
 			
 			nElems++;
 		}
@@ -81,8 +83,8 @@ public class Utility {
 			title = title_names[(int)(Math.random()*title_names.length)];
 			department = course_names[(int)(Math.random()*course_names.length)];
 			
-			Faculty p = new Faculty(firstName, lastName, title, salary, department, officePhone, miniFacultyCourseBag);
-			theBag.insert(p);
+//			Faculty p = new Faculty(firstName, lastName, title, salary, department, officePhone, miniFacultyCourseBag);
+//			theBag.insert(p);
 		}
 	}
 	

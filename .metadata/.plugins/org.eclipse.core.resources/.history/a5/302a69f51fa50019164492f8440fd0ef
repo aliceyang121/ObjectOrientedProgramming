@@ -1,0 +1,15 @@
+package model;
+
+import model.ClassroomBag;
+import model.CourseBag;
+import model.PersonBag;
+import model.TextbookBag;
+
+public class College {
+	private ClassroomBag classroomBag = new ClassroomBag(75);
+	private CourseBag courseBag = new CourseBag(1050);
+	private TextbookBag textbookBag = new TextbookBag(2000);
+	private PersonBag personBag = new PersonBag(3000);
+	
+
+}

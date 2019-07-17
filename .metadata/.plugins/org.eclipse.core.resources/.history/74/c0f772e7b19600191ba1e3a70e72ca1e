@@ -1,6 +1,0 @@
-package model;
-
-public class MiniFacultyCourseBag {
-	private MiniFacultyCourseInfo[] miniFacultyCourseInfo;
-	private int nElems = 0;
-}

@@ -3,10 +3,10 @@ package model;
 public class MiniFacultyCourseInfo {
 	private String courseNumber;
 	private String courseTitle;
-	private int numberOfCredits;
+	private double numberOfCredits;
 	private CourseStatusesFaculty courseStatus;
 	
-	public MiniFacultyCourseInfo(String courseNumber, String courseTitle, int numberOfCredits, CourseStatusesFaculty courseStatus) {
+	public MiniFacultyCourseInfo(String courseNumber, String courseTitle, double numberOfCredits, CourseStatusesFaculty courseStatus) {
 		super();
 		this.courseNumber = courseNumber;
 		this.courseTitle = courseTitle;
@@ -30,7 +30,7 @@ public class MiniFacultyCourseInfo {
 		this.courseTitle = courseTitle;
 	}
 
-	public int getNumberOfCredits() {
+	public double getNumberOfCredits() {
 		return numberOfCredits;
 	}
 

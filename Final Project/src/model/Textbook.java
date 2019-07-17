@@ -46,5 +46,10 @@ public class Textbook {
 		this.price = price;
 	}
 	
+	@Override
+	public String toString() {
+		return "Textbook: bookTitle=" + bookTitle + ", isbn=" + isbn + ", author=" + author + ", price=" + price;
+	}
+
 	
 }

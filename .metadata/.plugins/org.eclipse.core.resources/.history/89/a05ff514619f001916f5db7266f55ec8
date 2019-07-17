@@ -1,0 +1,20 @@
+package app;
+
+import model.CourseBag;
+import model.PersonBag;
+import utils.CourseFactory;
+import utils.Utility;
+
+public class Demo {
+
+	public static void main(String[] args) {
+		CourseBag courseBag = new CourseBag(2000);
+		CourseFactory.emitCourses(courseBag);
+		
+		
+		
+		PersonBag theBag = new PersonBag(2000);
+		Utility.generatePersons(theBag);
+		Application.changeBag(theBag);
+	}
+}

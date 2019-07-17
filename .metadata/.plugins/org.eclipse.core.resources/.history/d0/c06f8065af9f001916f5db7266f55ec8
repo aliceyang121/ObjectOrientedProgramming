@@ -1,0 +1,33 @@
+package utils;
+
+import model.Course;
+import model.CourseBag;
+import model.CourseStatusesStudent;
+import model.LetterGrades;
+import model.MiniStudentCourseBag;
+import model.MiniStudentInfo;
+
+public class MiniStudentCourseBagFactory {
+	
+	private static MiniStudentCourseBag miniStudentCourseBag;
+	private static String courseNumber;
+	private static double numberOfCredits;
+	private static LetterGrades letterGrade;
+	private static LetterGrades[] letterGrades = LetterGrades.values();
+	private static CourseStatusesStudent courseStatus;
+	private static CourseStatusesStudent[] courseStatusesStudent = CourseStatusesStudent.values();
+	
+	public static MiniStudentCourseBag emitMiniStudentCourseBag(CourseBag courseBag) {
+		Course course = courseBag.returnRandomCourse();
+		courseNumber = course.getCourseNumber();
+		numberOfCredits = course.getNumberOfCredits();
+		letterGrade = letterGrades[(int)(Math.random() * ((letterGrades.length) + 1))];
+		courseStatus = courseStatusesStudent[(int)(Math.random() * ((courseStatusesStudent.length) + 1))];
+		
+		MiniStudentInfo miniStudentInfo = new MiniStudentInfo(courseNumber, numberOfCredits, letterGrade, courseStatus);
+		
+		
+		
+		return miniStudentCourseBag;
+	}
+}

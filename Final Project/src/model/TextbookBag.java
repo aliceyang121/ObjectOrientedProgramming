@@ -43,7 +43,7 @@ public class TextbookBag {
 	
 	public void display() {
 		for (int i=0; i<nElems; i++) {
-			System.out.println(textbookArray[i]);
+			System.out.println(textbookArray[i].toString());
 		}
 	}
 }

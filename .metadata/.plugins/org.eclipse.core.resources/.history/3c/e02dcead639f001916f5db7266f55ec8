@@ -1,0 +1,21 @@
+package utils;
+
+import model.PersonBag;
+
+public class PersonFactory {
+	
+	public static void emitPersons(PersonBag personBag) {
+		emitStudents(personBag);
+		emitFaculty(personBag);
+	}
+
+	private static void emitStudents(PersonBag personBag) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private static void emitFaculty(PersonBag personBag) {
+		// TODO Auto-generated method stub
+		
+	}
+}
