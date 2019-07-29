@@ -1,0 +1,34 @@
+package app;
+
+import javafx.scene.control.Button;
+import model.College;
+import model.PersonBag;
+
+public class FindPersonApp {
+	
+	public static void findPerson(College college) {
+		
+		PersonBag personBag = college.getPersonBag();
+		
+		Button btnStudent = new Button("Find a Student");
+		Button btnFaculty = new Button("Find a Faculty");
+		
+		btnStudent.setOnAction(e ->   {
+			findStudent(personBag);
+		});
+		
+		btnFaculty.setOnAction(e ->   {
+			findFaculty(personBag);
+		});
+	}
+
+	private static void findStudent(PersonBag personBag) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void findFaculty(PersonBag personBag) {
+		// TODO Auto-generated method stub
+		
+	}
+}

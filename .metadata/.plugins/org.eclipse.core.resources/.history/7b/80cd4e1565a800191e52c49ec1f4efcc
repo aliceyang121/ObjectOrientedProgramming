@@ -7,20 +7,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import model.College;
-import model.Course;
-import model.CourseBag;
 import model.CourseStatusesFaculty;
 import model.CourseStatusesStudent;
-import model.Faculty;
 import model.LetterGrades;
 import model.Majors;
-import model.MiniFacultyCourseBag;
-import model.MiniFacultyCourseInfo;
 import model.MiniStudentCourseBag;
 import model.MiniStudentInfo;
 import model.PersonBag;
 import model.Student;
-import model.Titles;
 
 
 public class InsertPersonApp {
@@ -28,37 +22,20 @@ public class InsertPersonApp {
 	public static void insertPerson(College college) {
 		
 		PersonBag personBag = college.getPersonBag();
-		CourseBag courseBag = college.getCourseBag();
 		
 		Button btnStudent = new Button("Insert a Student");
 		Button btnFaculty = new Button("Insert a Faculty");
 		
 		btnStudent.setOnAction(e ->   {
-			insertStudent(personBag, courseBag);
+			insertStudent(personBag);
 		});
 		
-		btnFaculty.setOnAction(e ->   {
-			insertFaculty(personBag, courseBag);
+		btnStudent.setOnAction(e ->   {
+			insertFaculty(personBag);
 		});
-		
-		GridPane boxInsert = new GridPane();
-		
-		boxInsert.setVgap(20);
-		boxInsert.setHgap(20);
-		
-		boxInsert.add(btnStudent, 0, 0);
-		boxInsert.add(btnFaculty, 1, 0);
-		
-		boxInsert.setAlignment(Pos.CENTER);
-		Scene scene = new Scene(boxInsert);
-		Stage stage = new Stage();
-		stage.setScene(scene);
-		stage.setTitle("Insert a Person");
-		
-		stage.show();
 	}
 
-	private static void insertStudent(PersonBag personBag, CourseBag courseBag) {
+	private static void insertStudent(PersonBag personBag) {
 		Button btnEnter = new Button("Enter");
 		
 		TextField fieldFirstName = new TextField();
@@ -94,8 +71,7 @@ public class InsertPersonApp {
 			Majors major = Majors.valueOf(fieldMajor.getText());
 			String courseNumber = fieldCourse1.getText();
 			//DOUBLE CREDITS PROBLEM
-			Course course = courseBag.search(courseNumber);
-			double numberOfCredits = course.getNumberOfCredits();
+			double numberOfCredits = 2.0;
 			LetterGrades letterGrade = LetterGrades.valueOf(fieldLetterGrade1.getText());
 			CourseStatusesStudent courseStatus = CourseStatusesStudent.valueOf(fieldCourseStatus1.getText());
 			
@@ -117,7 +93,7 @@ public class InsertPersonApp {
 		stage.show();
 	}
 	
-	private static void insertFaculty(PersonBag personBag, CourseBag courseBag) {
+	private static void insertFaculty(PersonBag personBag) {
 		Button btnEnter = new Button("Enter");
 		
 		TextField fieldFirstName = new TextField();
@@ -135,48 +111,39 @@ public class InsertPersonApp {
 		fieldSalary.setPromptText("Salary");
 		fieldDepartment.setPromptText("Department");
 		fieldOfficePhone.setPromptText("Office Phone Number");
-		fieldCourseNumber.setPromptText("Course Number");
-		fieldCourseStatus.setPromptText("Course Status");
 		
 		
-		GridPane boxFaculty = new GridPane();
+		GridPane boxStudent = new GridPane();
 		
-		boxFaculty.setVgap(20);
-		boxFaculty.setHgap(20);
+		boxStudent.setVgap(20);
+		boxStudent.setHgap(20);
 		
-		boxFaculty.add(fieldFirstName, 0, 0);
-		boxFaculty.add(fieldLastName, 0, 1);
-		boxFaculty.add(fieldTitle, 0, 2);
-		boxFaculty.add(fieldSalary, 0, 3);
-		boxFaculty.add(fieldDepartment, 0, 4);
-		boxFaculty.add(fieldOfficePhone, 0, 5);
-		boxFaculty.add(fieldCourseNumber, 0, 6);
-		boxFaculty.add(fieldCourseStatus, 0, 7);
-		boxFaculty.add(btnEnter, 0, 8);
+		boxStudent.add(fieldFirstName, 0, 0);
+		boxStudent.add(fieldLastName, 0, 1);
+		boxStudent.add(fieldTitle, 0, 2);
+		boxStudent.add(fieldSalary, 0, 3);
+		boxStudent.add(fieldDepartment, 0, 4);
+		boxStudent.add(fieldOfficePhone, 0, 5);
+		boxStudent.add(btnEnter, 0, 6);
 
 		btnEnter.setOnAction(e ->   {
 			String firstName = fieldFirstName.getText();
 			String lastName = fieldLastName.getText();
-			Titles title  = Titles.valueOf(fieldTitle.getText());
-			double salary = Double.parseDouble(fieldSalary.getText());
-			Majors department = Majors.valueOf(fieldDepartment.getText());
-			String officePhone = fieldOfficePhone.getText();
-			String courseNumber = fieldCourseNumber.getText();
-			CourseStatusesFaculty courseStatus = CourseStatusesFaculty.valueOf(fieldCourseStatus.getText());
-			//PROBLEM STARTS HERE
-			Course course = courseBag.search(courseNumber);
-			String courseTitle = course.getCourseTitle();
-			double numberOfCredits = course.getNumberOfCredits();
+			Majors major = Majors.valueOf(fieldTitle.getText());
+			String courseNumber = fieldSalary.getText();
+			double numberOfCredits = 2.0;
+			LetterGrades letterGrade = LetterGrades.valueOf(fieldDepartment.getText());
+			CourseStatusesStudent courseStatus = CourseStatusesStudent.valueOf(fieldOfficePhone.getText());
 			
-			MiniFacultyCourseInfo miniFacultyCourseInfo = new MiniFacultyCourseInfo(courseNumber, courseTitle, numberOfCredits, courseStatus);
-			MiniFacultyCourseBag miniFacultyCourseBag = new MiniFacultyCourseBag(10);
-			miniFacultyCourseBag.insert(miniFacultyCourseInfo);
-			Faculty faculty = new Faculty (firstName, lastName, title, salary, department, officePhone, miniFacultyCourseBag);
-			personBag.insert(faculty);
+			MiniStudentInfo miniStudentInfo = new MiniStudentInfo(courseNumber, numberOfCredits, letterGrade, courseStatus);
+			MiniStudentCourseBag miniStudentCourseBag = new MiniStudentCourseBag(10);
+			miniStudentCourseBag.insert(miniStudentInfo);
+			Student student = new Student (firstName, lastName, major, miniStudentCourseBag);
+			personBag.insert(student);
 		});
 		
-		boxFaculty.setAlignment(Pos.CENTER);
-		Scene scene = new Scene(boxFaculty); // add the container onto the scene
+		boxStudent.setAlignment(Pos.CENTER);
+		Scene scene = new Scene(boxStudent); // add the container onto the scene
 		Stage stage = new Stage();
 		stage.setScene(scene); // set scene onto the stage
 		stage.setTitle("Insert Student");

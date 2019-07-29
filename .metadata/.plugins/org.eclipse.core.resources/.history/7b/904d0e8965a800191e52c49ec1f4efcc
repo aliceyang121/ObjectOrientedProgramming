@@ -43,7 +43,7 @@ public class Demo extends Application{
 		hboxDelete.setAlignment(Pos.CENTER);
 		
 		btnFind.setOnAction( e -> {
-			FindPersonApp.findPerson(college);
+			
 		});
 		
 		btnInsert.setOnAction(e -> {
@@ -51,7 +51,7 @@ public class Demo extends Application{
 		});
 		
 		btnDelete.setOnAction( e -> {
-			DeletePersonApp.deletePerson(college);
+			
 		});
 		
 		//START OF OLD PROGEAM
@@ -136,8 +136,7 @@ public class Demo extends Application{
 		box1.setAlignment(Pos.CENTER);
 		box1.getChildren().addAll(hbox1, hbox2, hbox3); // adding controls into the container
 		Scene scene = new Scene(box1); // add the container onto the scene
-
-// 		set scene onto the stage
+		stage.setScene(scene); // set scene onto the stage
 		stage.setTitle("stage1");
 		stage.setWidth(500);
 		stage.setHeight(500);

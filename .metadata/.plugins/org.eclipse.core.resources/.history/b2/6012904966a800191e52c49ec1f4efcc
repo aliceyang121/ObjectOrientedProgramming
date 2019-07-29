@@ -40,22 +40,6 @@ public class InsertPersonApp {
 		btnFaculty.setOnAction(e ->   {
 			insertFaculty(personBag, courseBag);
 		});
-		
-		GridPane boxInsert = new GridPane();
-		
-		boxInsert.setVgap(20);
-		boxInsert.setHgap(20);
-		
-		boxInsert.add(btnStudent, 0, 0);
-		boxInsert.add(btnFaculty, 1, 0);
-		
-		boxInsert.setAlignment(Pos.CENTER);
-		Scene scene = new Scene(boxInsert);
-		Stage stage = new Stage();
-		stage.setScene(scene);
-		stage.setTitle("Insert a Person");
-		
-		stage.show();
 	}
 
 	private static void insertStudent(PersonBag personBag, CourseBag courseBag) {
